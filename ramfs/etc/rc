@@ -1,0 +1,9 @@
+#!/bin/sh
+
+/bin/busybox --install -s /bin
+mount -t proc nodev /proc
+mount -t sysfs nodev /sys
+mount -t devtmpfs nodev /dev
+mkdir -p /dev/pts
+mount -t devpts nodev /dev/pts
+exit 0
